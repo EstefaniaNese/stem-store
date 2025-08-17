@@ -76,7 +76,7 @@ nav a:hover {
 }
 
 .logo img {
-  width: 85px;
+  width: 105px;
   height: 55px;
   margin-right: 8px;
 }
@@ -194,8 +194,6 @@ nav a:hover {
   transition: all 0.3s ease;
 }
 
-/* Overlay removido para mostrar las imágenes sin filtro */
-
 .tarjeta:hover {
   transform: translateY(10px);
 }
@@ -203,8 +201,6 @@ nav a:hover {
 .tarjeta:hover h3 {
   color: white;
 }
-
-/* Estilos de imagen removidos - ahora usamos background-image */
 
 .tarjeta h3 {
   font-size: 1.1rem;
