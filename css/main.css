@@ -1,0 +1,353 @@
+:root {
+  --color-primary: #da36ff;
+  --color-secondary: #ff6b35;
+  --color-dark: #0f1419;
+  --color-medium: #1a2332;
+  --color-light: #16213e;
+  --color-white: #ffffff;
+  --border-radius: 15px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-medium) 50%, var(--color-light) 100%);
+  color: var(--color-white);
+}
+
+/* HEADER */
+header {
+  background: rgba(15, 20, 25, 0.95);
+  color: white;
+  padding: 0.3em 0;
+  position: static;
+  width: 100%;
+  border-bottom: 2px solid var(--color-primary);
+  backdrop-filter: blur(15px);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  margin-left: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, var(--color-primary), #0099cc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+nav a:hover {
+  -webkit-text-fill-color: white;
+  border-color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: 44px;
+  margin-right: 8px;
+}
+
+
+/* BANNER */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  filter: brightness(0.8) contrast(1) saturate(1);
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(15, 20, 25, 0.8) 0%,
+      rgba(26, 35, 50, 0.6) 50%,
+      rgba(22, 33, 62, 0.7) 100%);
+  z-index: -1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(80deg, #da36ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px #562D5F;
+}
+
+/* TARJETAS */
+.tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1a2332 0%, #16213e 100%);
+  position: relative;
+}
+
+.tarjetas-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+
+
+.tarjeta {
+  /* Flexbox */
+  flex: 0 1 280px;
+  min-width: 250px;
+  max-width: 320px;
+  height: 200px;
+  
+  /* Layout */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+  /* Apariencia */
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Overlay integrado */
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4);
+  
+  /* Animación simplificada */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Imágenes de fondo específicas para cada categoría */
+.tarjeta-accion {
+  background-image: url('/assets/images/juegos_accion.webp');
+}
+
+.tarjeta-rol {
+  background-image: url('/assets/images/juegos_rol.webp');
+}
+
+.tarjeta-aventura {
+  background-image: url('/assets/images/juegos_aventura.jpg');
+}
+
+.tarjeta-estrategia {
+  background-image: url('/assets/images/juegos_estrategia.webp');
+}
+
+.tarjeta-deportes {
+  background-image: url('/assets/images/juegos_deportes_carreras.jpg');
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(218, 54, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.tarjeta-titulo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--color-white);
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+
+}
+
+
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #da36ff;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #da36ff, transparent);
+}
+
+footer a {
+  color: #e0e6ff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+footer a:hover {
+  color: var(--color-primary);
+  background: rgba(218, 54, 255, 0.1);
+}
+
+footer div {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0e6ff;
+}
+
+/* MEDIA QUERIES - TABLET */
+@media (max-width: 1024px) {
+  .banner-title { font-size: 3.5rem; }
+  .tarjetas-container { gap: 1.5rem; padding: 2.5rem 1.5rem; }
+  .tarjeta { flex: 0 1 250px; min-width: 220px; max-width: 280px; height: 180px; }
+  .tarjeta-titulo { font-size: 1.3rem; }
+}
+
+/* MEDIA QUERIES - TABLET PEQUEÑA */
+@media (max-width: 768px) {
+  nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+  nav ul { flex-direction: column; gap: 1rem; align-items: center; }
+  .banner-title { font-size: 2.8rem; letter-spacing: 2px; }
+  .tarjetas-container { gap: 1.2rem; padding: 2rem 1rem; }
+  .tarjeta { flex: 0 1 200px; min-width: 180px; max-width: 250px; height: 160px; }
+  .tarjeta-titulo { font-size: 1.2rem; letter-spacing: 1.5px; }
+  .banner { height: 80vh; margin-top: 0; }
+  .logo { font-size: 1.6em; }
+}
+
+/* MEDIA QUERIES CELULAR GRANDE */
+@media (max-width: 600px) {
+  .banner-title { font-size: 2.2rem; letter-spacing: 1px; }
+  .tarjetas-container { gap: 1rem; padding: 1.5rem 1rem; }
+  .tarjeta { flex: 0 1 100%; min-width: 280px; max-width: 350px; height: 140px; }
+  .tarjeta-titulo { font-size: 1.2rem; letter-spacing: 1px; }
+  .banner { height: 70vh; margin-top: 0; }
+}
+
+/* MEDIA QUERIES CELULAR PEQUEÑO */
+@media (max-width: 480px) {
+  .banner-title { font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 0.8rem; }
+  .logo { font-size: 1.4rem; }
+  nav { padding: 0.8rem; }
+  .banner-content { padding: 1.5rem; }
+  .tarjetas-container { padding: 1.2rem 0.8rem; }
+  .tarjeta { flex: 0 1 100%; min-width: 250px; max-width: 300px; height: 120px; }
+  .tarjeta-titulo { font-size: 1.1rem; letter-spacing: 1px; }
+  footer { padding: 1rem; }
+  footer div { font-size: 1rem; }
+}
+
+/* MEDIA QUERIES CELULAR MUY PEQUEÑO */
+@media (max-width: 360px) {
+  .banner-title { font-size: 1.5rem; }
+  .logo { font-size: 1.2rem; }
+  nav { padding: 0.6rem; }
+  .banner-content { padding: 1rem; }
+  .tarjetas-container { padding: 1rem 0.5rem; }
+  .tarjeta { flex: 0 1 100%; min-width: 200px; max-width: 280px; height: 100px; }
+  .tarjeta-titulo { font-size: 1rem; letter-spacing: 0.5px; }
+}
+
+/* MEDIA QUERIES - ORIENTACIÓN LANDSCAPE CELULARES */
+@media (max-height: 500px) and (orientation: landscape) {
+  .banner { height: 100vh; margin-top: 0; }
+  .banner-title { font-size: 2rem; margin-bottom: 0.5rem; }
+  .banner-content { padding: 1rem; }
+}
+
+/* MEDIA QUERIES - PANTALLAS MUY GRANDES */
+@media (min-width: 1400px) {
+  .banner-title { font-size: 5rem; }
+  .tarjetas-container { max-width: 1600px; }
+  .tarjeta { height: 250px; }
+  .tarjeta-titulo { font-size: 1.8rem; letter-spacing: 3px; }
+}
+
