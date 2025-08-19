@@ -228,22 +228,43 @@ nav a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* DESCRIPCIÓN DE JUEGOS */
+/* DESCRIPCIÓN DE JUEGOS CON SCROLL */
 .game-container p {
   font-size: 0.9rem;
   line-height: 1.4;
   color: #e0e6ff;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: justify;
   position: relative;
   z-index: 2;
   flex: 1;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  line-clamp: 5;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 120px;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos personalizados para scrollbar en navegadores webkit - Tarjetas */
+.game-container p::-webkit-scrollbar {
+  width: 6px;
+}
+
+.game-container p::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.game-container p::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.game-container p::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #e645ff, #ff7b45);
 }
 
 /* (Fin enlaces de tarjetas) */
@@ -312,8 +333,7 @@ footer a:hover {
   
   .game-container p {
     font-size: 0.85rem;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    max-height: 100px;
   }
 }
 
@@ -358,8 +378,7 @@ footer a:hover {
   
   .game-container p {
     font-size: 0.85rem;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    max-height: 90px;
   }
   
   .logo {
@@ -396,8 +415,7 @@ footer a:hover {
   
   .game-container p {
     font-size: 0.8rem;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    max-height: 80px;
   }
   
   /* .game-container a[href*="game_"] {
@@ -435,8 +453,7 @@ footer a:hover {
   
   .game-container p {
     font-size: 0.8rem;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    max-height: 70px;
   }
   
   /* .game-container a[href*="game_"] {
@@ -486,8 +503,7 @@ footer a:hover {
   
   .game-container p {
     font-size: 0.75rem;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    max-height: 60px;
   }
   
   /* .game-container a[href*="game_"] {
@@ -551,8 +567,7 @@ footer a:hover {
   
   .game-container p {
     font-size: 1rem;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
+    max-height: 150px;
   }
   
 }

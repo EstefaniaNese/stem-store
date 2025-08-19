@@ -262,6 +262,21 @@ footer::before {
   background: linear-gradient(90deg, transparent, #da36ff, transparent);
 }
 
+footer a {
+  color: #e0e6ff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+footer a:hover {
+  color: var(--color-primary);
+  background: rgba(218, 54, 255, 0.1);
+}
+
 footer div {
   font-size: 1rem;
   font-weight: 500;
