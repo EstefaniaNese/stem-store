@@ -76,8 +76,8 @@ nav a:hover {
 }
 
 .logo img {
-  width: 125px;
-  height: 55px;
+  width: 100px;
+  height: 44px;
   margin-right: 8px;
 }
 
@@ -181,6 +181,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   
   /* Apariencia */
   border: 2px solid transparent;
@@ -190,28 +191,56 @@ nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
   
-  /* Animación */
-  transition: all 0.3s ease;
+  /* Overlay integrado */
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4);
+  
+  /* Animación simplificada */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Imágenes de fondo específicas para cada categoría */
+.tarjeta-accion {
+  background-image: url('/assets/images/juegos_accion.webp');
+}
+
+.tarjeta-rol {
+  background-image: url('/assets/images/juegos_rol.webp');
+}
+
+.tarjeta-aventura {
+  background-image: url('/assets/images/juegos_aventura.jpg');
+}
+
+.tarjeta-estrategia {
+  background-image: url('/assets/images/juegos_estrategia.webp');
+}
+
+.tarjeta-deportes {
+  background-image: url('/assets/images/juegos_deportes_carreras.jpg');
 }
 
 .tarjeta:hover {
-  transform: translateY(10px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(218, 54, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.tarjeta:hover h3 {
-  color: white;
-}
 
-.tarjeta h3 {
-  font-size: 1.1rem;
+.tarjeta-titulo {
+  font-size: 1.4rem;
   font-weight: 900;
   color: var(--color-white);
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
   text-transform: uppercase;
   margin: 0;
-  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+
 }
+
+
 
 /* FOOTER */
 footer {
@@ -244,6 +273,7 @@ footer div {
   .banner-title { font-size: 3.5rem; }
   .tarjetas-container { gap: 1.5rem; padding: 2.5rem 1.5rem; }
   .tarjeta { flex: 0 1 250px; min-width: 220px; max-width: 280px; height: 180px; }
+  .tarjeta-titulo { font-size: 1.3rem; }
 }
 
 /* MEDIA QUERIES - TABLET PEQUEÑA */
@@ -253,6 +283,7 @@ footer div {
   .banner-title { font-size: 2.8rem; letter-spacing: 2px; }
   .tarjetas-container { gap: 1.2rem; padding: 2rem 1rem; }
   .tarjeta { flex: 0 1 200px; min-width: 180px; max-width: 250px; height: 160px; }
+  .tarjeta-titulo { font-size: 1.2rem; letter-spacing: 1.5px; }
   .banner { height: 80vh; margin-top: 0; }
   .logo { font-size: 1.6em; }
 }
@@ -262,7 +293,7 @@ footer div {
   .banner-title { font-size: 2.2rem; letter-spacing: 1px; }
   .tarjetas-container { gap: 1rem; padding: 1.5rem 1rem; }
   .tarjeta { flex: 0 1 100%; min-width: 280px; max-width: 350px; height: 140px; }
-  .tarjeta h3 { font-size: 1.2rem; }
+  .tarjeta-titulo { font-size: 1.2rem; letter-spacing: 1px; }
   .banner { height: 70vh; margin-top: 0; }
 }
 
@@ -274,7 +305,7 @@ footer div {
   .banner-content { padding: 1.5rem; }
   .tarjetas-container { padding: 1.2rem 0.8rem; }
   .tarjeta { flex: 0 1 100%; min-width: 250px; max-width: 300px; height: 120px; }
-  .tarjeta h3 { font-size: 1.1rem; letter-spacing: 1px; }
+  .tarjeta-titulo { font-size: 1.1rem; letter-spacing: 1px; }
   footer { padding: 1rem; }
   footer div { font-size: 1rem; }
 }
@@ -287,7 +318,7 @@ footer div {
   .banner-content { padding: 1rem; }
   .tarjetas-container { padding: 1rem 0.5rem; }
   .tarjeta { flex: 0 1 100%; min-width: 200px; max-width: 280px; height: 100px; }
-  .tarjeta h3 { font-size: 1rem; }
+  .tarjeta-titulo { font-size: 1rem; letter-spacing: 0.5px; }
 }
 
 /* MEDIA QUERIES - ORIENTACIÓN LANDSCAPE CELULARES */
@@ -302,6 +333,6 @@ footer div {
   .banner-title { font-size: 5rem; }
   .tarjetas-container { max-width: 1600px; }
   .tarjeta { height: 250px; }
-  .tarjeta h3 { font-size: 1.8rem; }
+  .tarjeta-titulo { font-size: 1.8rem; letter-spacing: 3px; }
 }
 

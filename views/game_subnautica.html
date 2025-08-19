@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<header>
-    <nav>
-    <div class="logo">SteM Store</div>
-    <ul>
-        <li><a href="/index.html">Inicio</a></li>
-        <li><a href="/views/cat_accion.html">Acción</a></li>
-        <li><a href="/views/cat_rol.html">Rol</a></li>
-        <li><a href="/views/cat_aventura.html">Aventura</a></li>
-        <li><a href="/views/cat_estrategia.html">Estrategia</a></li>
-        <li><a href="/views/cat_deportes_carreras.html">Deportes y carrera</a></li>
-    </ul>
-    </nav>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnautica - Stem Store</title>
+    <link rel="stylesheet" href="/css/game.css">
+    <link rel="icon" href="/assets/images/logo/logoStem.ico">
+</head>
 
-<section class="subnautica-product">
-    <h2>Subnautica</h2>
-    <img src="/assets/images/subnautica.jpg" alt="Imagen Subnautica" class="foto-subnautica">
-    <p>Desciende a las profundidades de un mundo submarino alienígena lleno de belleza y peligros. Crea equipamiento, pilota submarinos, terraforma el terreno, y burla los peligros para explorar exhuberantes arrecifes de coral, volcanes, sistemas de cuevas y más - Todo mientras intentas sobrevivir.</p>
-    <p>Después de estrellarte sobre un mundo océano alienígena, la única dirección a la que puedes ir es hacia abajo. Los océanos de Subnautica se extienden desde los arrefices de coral de la superficie bañados por el sol hasta las traicioneras fosas abisales. Gestiona tu suministro de oxígeno mientras exploras los bosques de algas, mesetas, arrecifes, y retorcidos sistemas de cuevas. El agua rebosa de vida: algunas criaturas son útiles, la mayoría peligrosas.</p>
-    <p>Fecha de lanzamiento: 23 de Enero de 2018</p>
-    <p>Etiquetas: Supervivencia en mundo abierto, Supervivencia, RV</p>
-    <p>Precio: CLP$5.075</p>
-    <p>Añadir al carrito de compra</p>
-</section>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/images/logo/stem-isologo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/views/cat_accion.html">Acción</a></li>
+                <li><a href="/views/cat_rol.html">Rol</a></li>
+                <li><a href="/views/cat_aventura.html">Aventura</a></li>
+                <li><a href="/views/cat_estrategia.html">Estrategia</a></li>
+                <li><a href="/views/cat_deportes_carreras.html">Deportes y carrera</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="game-detail-container">
+        <section class="game-hero">
+            <!-- COLUMNA 1: IMAGEN -->
+            <div class="game-media">
+                <img src="/assets/images/subnautica.jpg" alt="Subnautica" class="game-image">
+            </div>
+            
+            <!-- COLUMNA 2: CONTENIDO PRINCIPAL -->
+            <div class="game-content">
+                <div class="game-header">
+                    <h1 class="game-title">Subnautica</h1>
+                    <div class="game-price">CLP$5.075</div>
+                </div>
+                
+                <div class="game-meta-compact">
+                    <div class="meta-compact">
+                        <span class="meta-label">Lanzamiento</span>
+                        <span class="meta-value">23 de Enero de 2018</span>
+                    </div>
+                </div>
+                
+                <div class="game-tags">
+                    <span class="tag">Supervivencia</span>
+                    <span class="tag">Mundo abierto</span>
+                    <span class="tag">Submarino</span>
+                    <span class="tag">VR</span>
+                </div>
+                
+                <div class="game-description-inline">
+                    <p>Desciende a las profundidades de un mundo submarino alienígena lleno de belleza y peligros. Crea equipamiento, pilota submarinos, terraforma el terreno, y burla los peligros para explorar exhuberantes arrecifes de coral, volcanes, sistemas de cuevas y más - Todo mientras intentas sobrevivir.</p>
+                    <p>Después de estrellarte sobre un mundo océano alienígena, la única dirección a la que puedes ir es hacia abajo. Los océanos de Subnautica se extienden desde los arrefices de coral de la superficie bañados por el sol hasta las traicioneras fosas abisales. Gestiona tu suministro de oxígeno mientras exploras los bosques de algas, mesetas, arrecifes, y retorcidos sistemas de cuevas. El agua rebosa de vida: algunas criaturas son útiles, la mayoría peligrosas.</p>
+                </div>
+                
+                <!-- BOTÓN DE COMPRA BAJO LA DESCRIPCIÓN -->
+                <div class="purchase-section">
+                    <button class="purchase-button">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<footer>
-    <a href ="/views/contacto.html">Contacto y soporte</a>
-</footer>
+    <footer>
+        <a href="/views/contacto.html">Contacto y soporte</a>
+    </footer>
+</body>
+</html>

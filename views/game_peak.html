@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<header>
-    <nav>
-    <div class="logo">SteM Store</div>
-    <ul>
-        <li><a href="/index.html">Inicio</a></li>
-        <li><a href="/views/cat_accion.html">Acción</a></li>
-        <li><a href="/views/cat_rol.html">Rol</a></li>
-        <li><a href="/views/cat_aventura.html">Aventura</a></li>
-        <li><a href="/views/cat_estrategia.html">Estrategia</a></li>
-        <li><a href="/views/cat_deportes_carreras.html">Deportes y carrera</a></li>
-    </ul>
-    </nav>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peak - Stem Store</title>
+    <link rel="stylesheet" href="/css/game.css">
+    <link rel="icon" href="/assets/images/logo/logoStem.ico">
+</head>
 
-<section class="peak-product">
-    <h2>Peak</h2>
-    <img src="/assets/images/peak.jpg" alt="Imagen Peak" class="foto-peak">
-    <p>PEAK es un juego cooperativo de escalada en el que un solo error puede ser fatal. Ya sea en solitario o en grupo, la única esperanza de salir de la misteriosa isla es subiendo hasta la cima de la montaña del centro. ¿Tenéis lo que hace falta para subir al PICO?</p>
-    <p>¿Necesitas que te echen una mano? Tendrás que confiar en tus amigos si pretendes escalar una montaña cuyo trazado cambia día que juegas. Ayudaos mutuamente para encaramaros a cornisas, o fijad sogas y ganchos de escalada para facilitar el ascenso a quienes vengan detrás.</p>
-    <p>Fecha de lanzamiento: 16 de Junio de 2025</p>
-    <p>Etiquetas: Multijugador, Cooperativos en linea, Física, 3D</p>
-    <p>Precio: CLP$2.604</p>
-    <p>Añadir al carrito de compra</p>
-</section>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/images/logo/stem-isologo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/views/cat_accion.html">Acción</a></li>
+                <li><a href="/views/cat_rol.html">Rol</a></li>
+                <li><a href="/views/cat_aventura.html">Aventura</a></li>
+                <li><a href="/views/cat_estrategia.html">Estrategia</a></li>
+                <li><a href="/views/cat_deportes_carreras.html">Deportes y carrera</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="game-detail-container">
+        <section class="game-hero">
+            <!-- COLUMNA 1: IMAGEN -->
+            <div class="game-media">
+                <img src="/assets/images/peak.jpg" alt="Peak" class="game-image">
+            </div>
+            
+            <!-- COLUMNA 2: CONTENIDO PRINCIPAL -->
+            <div class="game-content">
+                <div class="game-header">
+                    <h1 class="game-title">Peak</h1>
+                    <div class="game-price">CLP$2.604</div>
+                </div>
+                
+                <div class="game-meta-compact">
+                    <div class="meta-compact">
+                        <span class="meta-label">Lanzamiento</span>
+                        <span class="meta-value">16 de Junio de 2025</span>
+                    </div>
+                </div>
+                
+                <div class="game-tags">
+                    <span class="tag">Multijugador</span>
+                    <span class="tag">Cooperativo</span>
+                    <span class="tag">Física</span>
+                    <span class="tag">3D</span>
+                </div>
+                
+                <div class="game-description-inline">
+                    <p>PEAK es un juego cooperativo de escalada en el que un solo error puede ser fatal. Ya sea en solitario o en grupo, la única esperanza de salir de la misteriosa isla es subiendo hasta la cima de la montaña del centro. ¿Tenéis lo que hace falta para subir al PICO?</p>
+                    <p>¿Necesitas que te echen una mano? Tendrás que confiar en tus amigos si pretendes escalar una montaña cuyo trazado cambia día que juegas. Ayudaos mutuamente para encaramaros a cornisas, o fijad sogas y ganchos de escalada para facilitar el ascenso a quienes vengan detrás.</p>
+                </div>
+                
+                <!-- BOTÓN DE COMPRA BAJO LA DESCRIPCIÓN -->
+                <div class="purchase-section">
+                    <button class="purchase-button">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<footer>
-    <a href ="/views/contacto.html">Contacto y soporte</a>
-</footer>
+    <footer>
+        <a href="/views/contacto.html">Contacto y soporte</a>
+    </footer>
+</body>
+</html>
