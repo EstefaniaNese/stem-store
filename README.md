@@ -1,1 +1,2 @@
-# stem-store
+# StemStore
+##Plataforma de videojuegos 
