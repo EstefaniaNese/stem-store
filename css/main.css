@@ -201,23 +201,23 @@ nav a:hover {
 
 /* Imágenes de fondo específicas para cada categoría */
 .tarjeta-accion {
-  background-image: url('/stem-store/assets/images/categorias/accion.webp');
+  background-image: url('../assets/images/categorias/accion.webp');
 }
 
 .tarjeta-rol {
-  background-image: url('/stem-store/assets/images/categorias/rol.webp');
+  background-image: url('../assets/images/categorias/rol.webp');
 }
 
 .tarjeta-aventura {
-  background-image: url('/stem-store/assets/images/categorias/aventura.jpg');
+  background-image: url('../assets/images/categorias/aventura.jpg');
 }
 
 .tarjeta-estrategia {
-  background-image: url('/stem-store/assets/images/categorias/estrategia.webp');
+  background-image: url('../assets/images/categorias/estrategia.webp');
 }
 
 .tarjeta-deportes {
-  background-image: url('/stem-store/assets/images/categorias/deportes-carreras.jpg');
+  background-image: url('../assets/images/categorias/deportes-carreras.jpg');
 }
 
 .tarjeta:hover {
