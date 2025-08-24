@@ -1,0 +1,57 @@
+:root {
+  /* Colores principales del tema */
+  --color-primary: #da36ff;
+  --color-secondary: #ff6b35;
+  --color-dark: #0f1419;
+  --color-medium: #1a2332;
+  --color-light: #16213e;
+  --color-white: #ffffff;
+  --color-text: #e0e6ff;
+  --color-text-muted: #b0b8c8;
+  
+  /* Bordes y sombras */
+  --border-radius: 15px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 20px;
+  
+  /* Sombras */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 35px rgba(0, 0, 0, 0.4);
+  --shadow-primary: 0 4px 15px rgba(218, 54, 255, 0.3);
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(45deg, var(--color-primary), #0099cc);
+  --gradient-secondary: linear-gradient(45deg, var(--color-secondary), #ff8c42);
+  --gradient-dark: linear-gradient(135deg, var(--color-dark) 0%, var(--color-medium) 50%, var(--color-light) 100%);
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Tipografía */
+  --font-family: 'Arial', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}

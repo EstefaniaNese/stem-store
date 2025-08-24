@@ -5,49 +5,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aventura - Stem Store</title>
-    <link rel="stylesheet" href="/stem-store/css/categoria.css">
-    <link rel="icon" href="/stem-store/assets/logo/logoStem.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/logo/logoStem.ico">
 </head>
 
 <body>
+    <!-- Header con Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/logo/stem-isologo.png" alt="Stem Store Logo">
+                </a>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navegación principal -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategorias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownCategorias">
+                                <li><a class="dropdown-item" href="accion.html">
+                                    <i class="fas fa-fire me-2"></i>Acción
+                                </a></li>
+                                <li><a class="dropdown-item" href="rol.html">
+                                    <i class="fas fa-dice-d20 me-2"></i>Rol
+                                </a></li>
+                                <li><a class="dropdown-item active" href="aventura.html">
+                                    <i class="fas fa-compass me-2"></i>Aventura
+                                </a></li>
+                                <li><a class="dropdown-item" href="estrategia.html">
+                                    <i class="fas fa-chess me-2"></i>Estrategia
+                                </a></li>
+                                <li><a class="dropdown-item" href="deportes-carreras.html">
+                                    <i class="fas fa-trophy me-2"></i>Deportes y Carreras
+                                </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <!-- Botón de registrar -->
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-user-plus me-1"></i>Registrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <nav>
-        <div class="logo">
-          <img src="/stem-store/assets/logo/stem-isologo.png" alt="Logo">
+    <!-- Contenido principal -->
+    <main id="main-content" class="mt-5 pt-4">
+        <!-- Banner de categoría -->
+        <section class="category-banner position-relative text-center text-white mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="display-3 fw-bold mb-4" style="background: linear-gradient(80deg, #da36ff, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                            <i class="fas fa-compass me-3"></i>Categoría Aventura
+                        </h1>
+                        <p class="lead fs-4">Juegos de exploración y aventura en mundos únicos y misteriosos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Juegos de la categoría -->
+        <section class="games-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h2 class="h3 text-custom-primary">Juegos de Aventura Disponibles</h2>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Peak -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card h-100 game-card border-0 shadow-lg">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/images/juegos/peak.jpg" class="img-fluid rounded-start h-100" alt="Peak" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body d-flex flex-column h-100">
+                                        <h3 class="card-title h5 text-custom-primary">Peak</h3>
+                                        <p class="card-text flex-grow-1">PEAK es un juego cooperativo de escalada en el que un solo error puede ser fatal. Ya sea en solitario o en grupo, la única esperanza de salir de la misteriosa isla es subiendo hasta la cima de la montaña del centro.</p>
+                                        <div class="mt-auto">
+                                            <a href="../juegos/peak.html" class="btn btn-primary">
+                                                <i class="fas fa-info-circle me-2"></i>Ver Detalles
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Subnautica -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card h-100 game-card border-0 shadow-lg">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/images/juegos/subnautica.jpg" class="img-fluid rounded-start h-100" alt="Subnautica" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body d-flex flex-column h-100">
+                                        <h3 class="card-title h5 text-custom-primary">Subnautica</h3>
+                                        <p class="card-text flex-grow-1">Desciende a las profundidades de un mundo submarino alienígena lleno de belleza y peligros. Crea equipamiento, pilota submarinos, terraforma el terreno, y burla los peligros para explorar exuberantes arrecifes de coral.</p>
+                                        <div class="mt-auto">
+                                            <a href="../juegos/subnautica.html" class="btn btn-primary">
+                                                <i class="fas fa-info-circle me-2"></i>Ver Detalles
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row py-1">
+                <div class="col-md-6 text-center text-md-start">
+                    <img src="../assets/logo/stem-isologo.png" alt="Stem Store Logo" class="img-fluid" style="width: 100px; height: auto;">
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="../contacto.html" class="btn btn-outline-light">
+                        <i class="fas fa-headset me-2"></i>Contacto y Soporte
+                    </a>
+                </div>
+            </div>
+            
         </div>
-    <ul>
-        <li><a href="/stem-store/index.html">Inicio</a></li>
-        <li><a href="/stem-store/categorias/accion.html">Acción</a></li>
-        <li><a href="/stem-store/categorias/rol.html">Rol</a></li>
-        <li><a href="/stem-store/categorias/aventura.html">Aventura</a></li>
-        <li><a href="/stem-store/categorias/aventura.html">Estrategia</a></li>
-        <li><a href="/stem-store/categorias/deportes-carreras.html">Deportes y carrera</a></li>
-    </ul>
-    </nav>
-</header>
+    </footer>
 
-<main class="games-container">
-
-<section class="game-container">
-    <h2>Peak</h2>
-    <img src="/stem-store/assets/images/juegos/peak.jpg" alt="Imagen Peak">
-    <p>PEAK es un juego cooperativo de escalada en el que un solo error puede ser fatal. Ya sea en solitario o en grupo, la única esperanza de salir de la misteriosa isla es subiendo hasta la cima de la montaña del centro. ¿Tenéis lo que hace falta para subir al PICO? ¿Necesitas que te echen una mano? Tendrás que confiar en tus amigos si pretendes escalar una montaña cuyo trazado cambia día que juegas. Ayudaos mutuamente para encaramaros a cornisas, o fijad sogas y ganchos de escalada para facilitar el ascenso a quienes vengan detrás.</p>
-    <a href="/stem-store/juegos/peak.html">Detalles</a>
-</section>
-
-<section class="game-container">
-    <h2>Subnautica</h2>
-    <img src="/stem-store/assets/images/juegos/subnautica.jpg" alt="Imagen Subnautica">
-    <p>Desciende a las profundidades de un mundo submarino alienígena lleno de belleza y peligros. Crea equipamiento, pilota submarinos, terraforma el terreno, y burla los peligros para explorar exhuberantes arrecifes de coral, volcanes, sistemas de cuevas y más - Todo mientras intentas sobrevivir.</p>
-    <a href="/stem-store/juegos/subnautica.html">Detalles</a>
-</section>
-
-</main>
-
-<footer>
-    <a href ="/stem-store/contacto.html">Contacto y soporte</a>
-</footer>
-
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
