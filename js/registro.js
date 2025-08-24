@@ -1,4 +1,5 @@
 // 
+console.log("JS cargado")
 const form = document.querySelector("form");
 const campos = {
     nombre: {
@@ -16,7 +17,7 @@ const campos = {
         error: {
             required: "El nombre de usuario es obligatorio.",
             length: "El nombre debe tener entre 3 y 50 caracteres.",
-            format: "No se permiten carácteres especiales"
+            format: "No se permiten carácteres especiales, espacios, comas ni puntos."
         }
     },
     email: {
@@ -71,6 +72,7 @@ function limpiarError(id) {
 }
 
 form.addEventListener("submit", function (event) {
+    event.preventDefault();
     let valido = true;
 
 // Limpiar errores previos
@@ -149,6 +151,9 @@ if (direccion && !campos.direccion.regex.test(direccion)) {
     valido = false;
 }});
 
+if (valido) {
+    form.submit();
+}
 // Validación en tiempo real
 Object.keys(campos).forEach(campo => {
     document.getElementById(campo).addEventListener("input", function () {
