@@ -245,6 +245,12 @@ p {
   border-color: var(--color-primary) !important;
 }
 
+.box {
+  background-color: #2b0344; 
+  border-radius: 12px;
+}
+
+
 /* Animaciones personalizadas */
 @keyframes fadeInUp {
   from {
