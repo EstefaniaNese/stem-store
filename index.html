@@ -4,52 +4,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stem Store</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Stem Store - Tu Tienda de Videojuegos</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="assets/logo/logoStem.ico">
 </head>
 
+<body>
+    <!-- Header con Navbar -->
 <header>
-    <nav>
-        <div class="logo">
-          <img src="assets/logo/stem-isologo.png" alt="Logo">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo/stem-isologo.png" alt="Stem Store Logo">
+                </a>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                                    <!-- Navegación principal -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategorias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorías
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownCategorias">
+                                    <li><a class="dropdown-item" href="categorias/accion.html">
+                                        <i class="fas fa-fire me-2"></i>Acción
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="categorias/rol.html">
+                                        <i class="fas fa-dice-d20 me-2"></i>Rol
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="categorias/aventura.html">
+                                        <i class="fas fa-compass me-2"></i>Aventura
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="categorias/estrategia.html">
+                                        <i class="fas fa-chess me-2"></i>Estrategia
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="categorias/deportes-carreras.html">
+                                        <i class="fas fa-trophy me-2"></i>Deportes y Carreras
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                    <!-- Botón de registrar -->
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item">
+                            <a href="registro.html" class="btn btn-primary btn-sm">
+                                <i class="fas fa-user-plus me-1"></i>Registrar
+                            </a>
+                        </div>
+                    </div>
+                </div>
         </div>
-        <ul>
-            <li><a href="#">Registrarse</a></li>
-            <li><a href="#">Iniciar Sesion</a></li>
-        </ul>
     </nav>
 </header>
 
-<section class="banner">
-    <img src="assets/images/banner.jpg" alt="Banner Categorias">
-    <div class="banner-content">
-        <h1 class="banner-title">Categorias</h1>
+    <!-- Contenido principal -->
+    <main id="main-content" class="mt-5 pt-4">
+        <!-- Banner principal -->
+        <section class="banner position-relative text-center text-white">
+            <img src="assets/images/banner.jpg" alt="Banner Categorías" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" style="z-index: -2; filter: brightness(0.6);">
+            <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100" style="z-index: -1; background: linear-gradient(135deg, rgba(15, 20, 25, 0.8) 0%, rgba(26, 35, 50, 0.6) 50%, rgba(22, 33, 62, 0.7) 100%);"></div>
+            
+            <div class="container">
+                <div class="row min-vh-100 align-items-center justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h1 class="display-1 fw-bold mb-4" style="background: linear-gradient(80deg, #da36ff, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                            Categorías
+                        </h1>
+                        <p class="lead fs-4 mb-5">Descubre los mejores videojuegos organizados por género</p>
+                        
+                        <!-- Flecha de scroll -->
+                        <div class="scroll-arrow" onclick="scrollToCategories()">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
     </div>
 </section>
 
-<section class="tarjetas-container">
-  <a href="categorias/accion.html" class="tarjeta tarjeta-accion">
-    <h1 class="tarjeta-titulo">Acción</h1>
-  </a>
-
-  <a href="categorias/rol.html" class="tarjeta tarjeta-rol">
-    <h1 class="tarjeta-titulo">Rol</h1>
-  </a>
-
-  <a href="categorias/aventura.html" class="tarjeta tarjeta-aventura">
-    <h1 class="tarjeta-titulo">Aventura</h1>
-  </a>
-
-  <a href="categorias/estrategia.html" class="tarjeta tarjeta-estrategia">
-    <h1 class="tarjeta-titulo">Estrategia</h1>
-  </a>
-
-  <a href="categorias/deportes-carreras.html" class="tarjeta tarjeta-deportes">
-    <h1 class="tarjeta-titulo">Deportes y carrera</h1>
-  </a>
+        <!-- Categorías principales -->
+        <section class="categories-section py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Categoría Acción -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="category-card card h-100 border-0 shadow-lg" onclick="window.location.href='categorias/accion.html'">
+                            <div class="card-img-top position-relative overflow-hidden" style="height: 250px; background: url('assets/images/categorias/accion.webp') center/cover;">
+                                <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
+                                        style="background: rgba(0, 0, 0, 0.4); transition: all 0.3s ease;">
+                                    <h3 class="text-white fw-bold fs-2 text-uppercase letter-spacing-2">Acción</h3>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="card-text">Juegos de acción y aventura con combate dinámico y emocionante</p>
+                                <button class="btn btn-primary" onclick="event.stopPropagation(); window.location.href='categorias/accion.html'">
+                                    <i class="fas fa-arrow-right me-2"></i>Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categoría Rol -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="category-card card h-100 border-0 shadow-lg" onclick="window.location.href='categorias/rol.html'">
+                            <div class="card-img-top position-relative overflow-hidden" style="height: 250px; background: url('assets/images/categorias/rol.webp') center/cover;">
+                                <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
+                                        style="background: rgba(0, 0, 0, 0.4); transition: all 0.3s ease;">
+                                    <h3 class="text-white fw-bold fs-2 text-uppercase letter-spacing-2">Rol</h3>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="card-text">Juegos de rol con historias épicas y personajes personalizables</p>
+                                <button class="btn btn-primary" onclick="event.stopPropagation(); window.location.href='categorias/rol.html'">
+                                    <i class="fas fa-arrow-right me-2"></i>Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categoría Aventura -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="category-card card h-100 border-0 shadow-lg" onclick="window.location.href='categorias/aventura.html'">
+                            <div class="card-img-top position-relative overflow-hidden" style="height: 250px; background: url('assets/images/categorias/aventura.jpg') center/cover;">
+                                <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
+                                        style="background: rgba(0, 0, 0, 0.4); transition: all 0.3s ease;">
+                                    <h3 class="text-white fw-bold fs-2 text-uppercase letter-spacing-2">Aventura</h3>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="card-text">Juegos de exploración y aventura en mundos únicos y misteriosos</p>
+                                <button class="btn btn-primary" onclick="event.stopPropagation(); window.location.href='categorias/aventura.html'">
+                                    <i class="fas fa-arrow-right me-2"></i>Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categoría Estrategia -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="category-card card h-100 border-0 shadow-lg" onclick="window.location.href='categorias/estrategia.html'">
+                            <div class="card-img-top position-relative overflow-hidden" style="height: 250px; background: url('assets/images/categorias/estrategia.webp') center/cover;">
+                                <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
+                                        style="background: rgba(0, 0, 0, 0.4); transition: all 0.3s ease;">
+                                    <h3 class="text-white fw-bold fs-2 text-uppercase letter-spacing-2">Estrategia</h3>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="card-text">Juegos de estrategia y táctica para mentes brillantes y analíticas</p>
+                                <button class="btn btn-primary" onclick="event.stopPropagation(); window.location.href='categorias/estrategia.html'">
+                                    <i class="fas fa-arrow-right me-2"></i>Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categoría Deportes -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="category-card card h-100 border-0 shadow-lg" onclick="window.location.href='categorias/deportes-carreras.html'">
+                            <div class="card-img-top position-relative overflow-hidden" style="height: 250px; background: url('assets/images/categorias/deportes-carreras.jpg') center/cover;">
+                                <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
+                                        style="background: rgba(0, 0, 0, 0.4); transition: all 0.3s ease;">
+                                    <h3 class="text-white fw-bold fs-2 text-uppercase letter-spacing-2">Deportes</h3>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="card-text">Juegos de deportes y carreras para la adrenalina y la competencia</p>
+                                <button class="btn btn-primary" onclick="event.stopPropagation(); window.location.href='categorias/deportes-carreras.html'">
+                                    <i class="fas fa-arrow-right me-2"></i>Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </section>
+    </main>
 
-<footer>
-  <a href="contacto.html">Contacto y soporte</a>
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row py-1">
+                <div class="col-md-6 text-center text-md-start">
+                    <img src="assets/logo/stem-isologo.png" alt="Stem Store Logo" class="img-fluid" style="width: 100px; height: auto;">
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="contacto.html" class="btn btn-outline-light">
+                        <i class="fas fa-headset me-2"></i>Contacto y Soporte
+                    </a>
+                </div>
+            </div>
+            <div class="row py-1 border-secondary">
+                <div class="col-12 text-center">
+                    <p class="text-custom-secondary mb-0">
+                        &copy; 2024 Stem Store. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
 </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script personalizado para scroll suave -->
+    <script>
+        function scrollToCategories() {
+            const categoriesSection = document.querySelector('.categories-section');
+            if (categoriesSection) {
+                categoriesSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+        
+        // Ocultar flecha cuando se hace scroll
+        window.addEventListener('scroll', function() {
+            const scrollArrow = document.querySelector('.scroll-arrow');
+            if (scrollArrow) {
+                if (window.scrollY > 100) {
+                    scrollArrow.style.opacity = '0';
+                    scrollArrow.style.pointerEvents = 'none';
+                } else {
+                    scrollArrow.style.opacity = '1';
+                    scrollArrow.style.pointerEvents = 'auto';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
